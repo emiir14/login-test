@@ -11,9 +11,10 @@ import { FormComponent } from './components/form/form.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, HomeComponent, LoginComponent, PageNotFoundComponent],
+  declarations: [AppComponent, FormComponent, HomeComponent, LoginComponent, PageNotFoundComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

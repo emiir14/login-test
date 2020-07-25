@@ -1,1 +1,30 @@
-<p>home works!</p>
+<app-navbar></app-navbar>
+
+<div class="home-container">
+  <div class="home-container__text">
+    <h1>Hey! Welcome to churrasco travel</h1>
+    <h5>These are some of the destinations we can offer FOR FREE!</h5>
+    <p>
+      DISCLAIMER: We only offer Google Maps base travels<br />
+      If you have any issues while traveling.. it's Googles fault
+    </p>
+  </div>
+  <div class="home-container__gallery" *ngFor="let item of items">
+    <div class="row">
+      <div class="col-lg-3 col-sm-12">
+        <div class="home-container__card">
+          <div class="home-container__card_image">
+            <img src="" alt="" srcset="{{item.image}}" />
+          </div>
+          <div class="home-container__card_info">
+            <p>{{ item.text }}</p>
+            <p>{{ item.text2 }}</p>
+          </div>
+          <div class="home-container__button_wraper">
+            <button class="home-container__button">Ver en Maps</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

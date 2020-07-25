@@ -1,18 +1,22 @@
+.inputBox {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
 input {
   border: 0;
 }
 
-.inputBox {
-  border: 1px solid black;
+.row no-gutter {
+  margin-left: 0;
+  margin-right: 0;
 }
 
-hr {
+.hr-1 {
   background-color: #fff;
   padding: 0;
-  margin: 80px;
-}
-
-hr.hr-1 {
+  margin: 5px;
   border: 0;
   height: 1px;
   background-image: linear-gradient(
