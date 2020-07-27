@@ -1,7 +1,8 @@
+import { JwtService } from './jwt.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { OAuthModule } from 'angular-oauth2-oidc';
+import { JwtModule } from '@auth0/angular-jwt';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -14,15 +15,28 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, HomeComponent, LoginComponent, PageNotFoundComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    FormComponent,
+    HomeComponent,
+    LoginComponent,
+    PageNotFoundComponent,
+    NavbarComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    OAuthModule.forRoot(),
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: function tokenGetter() {
+          return localStorage.getItem('access_token');
+        },
+      },
+    }),
   ],
-  providers: [],
+  providers: [JwtService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

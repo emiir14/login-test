@@ -1,74 +1,69 @@
 .home-container {
-  padding-top: 4%;
   width: 100%;
-  height: 100%;
-  padding-right: 5%;
-  padding-left: 5%;
   background-color: rgb(44, 37, 96);
 
-  justify-content: center;
-  align-content: center;
-
-  &__text {
+  &__information {
+    width: 100%;
     color: white;
-    h1 {
-      padding-bottom: 2%;
+
+    &__title {
+      margin-bottom: 20px;
     }
-    h5 {
-      padding-bottom: 2%;
+    &__subtitle {
+      margin-bottom: 5px;
     }
-    p {
-      font-size: xx-small;
+    &__description {
+      margin-bottom: 20px;
+      font-size: 14px;
     }
   }
 
   &__gallery {
-    width: 100%;
-    height: 100%;
-  }
+    padding: 20px;
 
-  &__card {
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    width: 25rem;
-    max-width: 425px;
-    max-height: 425px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 0.75rem;
-  }
+    &__card {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
 
-  &__card_image {
-    border-radius: 8px;
-    overflow: hidden;
-    padding-bottom: 65%;
-    background-repeat: no-repeat;
-    background-size: 150%;
-    background-position: 0 5%;
-    position: relative;
-    max-width: 100%;
-    display: block;
-    img {
-      max-width: 100%;
-      display: block;
+      &__image {
+        width: 100%;
+        height: 300px;
+        border-radius: 8px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: 0 5%;
+        position: relative;
+        display: block;
+      }
+
+      &__info {
+        margin-top: 15px;
+      }
+    }
+
+    &__button-wraper {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      &__button {
+        border-radius: 5px;
+        width: 15rem;
+        height: 3rem;
+        background-color: rgb(46, 38, 112);
+        color: white;
+        font-weight: bold;
+      }
     }
   }
+}
 
-  &__card_info {
-    padding: 1rem 1rem;
-  }
+.container {
+  max-width: 1550px;
+}
 
-  &__button_wraper {
-    align-content: center;
-    align-self: center;
-  }
-  &__button {
-    border-radius: 5px;
-    width: 15rem;
-    height: 3rem;
-    background-color: rgb(46, 38, 112);
-    color: white;
-    font-weight: bold;
-  }
+.col-md-4 {
+  flex: 0 0 29%;
+  margin: 25px;
 }

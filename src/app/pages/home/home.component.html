@@ -1,30 +1,87 @@
 <app-navbar></app-navbar>
 
 <div class="home-container">
-  <div class="home-container__text">
-    <h1>Hey! Welcome to churrasco travel</h1>
-    <h5>These are some of the destinations we can offer FOR FREE!</h5>
-    <p>
-      DISCLAIMER: We only offer Google Maps base travels<br />
-      If you have any issues while traveling.. it's Googles fault
-    </p>
-  </div>
-  <div class="home-container__gallery" *ngFor="let item of items">
+  <div class="container">
     <div class="row">
-      <div class="col-lg-3 col-sm-12">
-        <div class="home-container__card">
-          <div class="home-container__card_image">
-            <img src="" alt="" srcset="{{item.image}}" />
-          </div>
-          <div class="home-container__card_info">
-            <p>{{ item.text }}</p>
-            <p>{{ item.text2 }}</p>
-          </div>
-          <div class="home-container__button_wraper">
-            <button class="home-container__button">Ver en Maps</button>
+      <div class="col-sm-12">
+        <div class="home-container__information">
+          <h1 class="home-container__information__title">
+            Hey! Welcome to churrasco travel
+          </h1>
+          <h5 class="home-container__information__subtitle">
+            These are some of the destinations we can offer FOR FREE!
+          </h5>
+          <p class="home-container__information__description">
+            DISCLAIMER: We only offer Google Maps base travels<br />
+            If you have any issues while traveling.. it's Googles fault
+          </p>
+        </div>
+      </div>
+
+      <div class="home-container__gallery">
+        <div class="row">
+          <div
+            class="home-container__gallery__card col-md-4"
+            *ngFor="let item of items"
+          >
+            <img
+              class="home-container__gallery__card__image"
+              src=""
+              alt=""
+              srcset="{{item.image}}"
+            />
+            <div class="home-container__gallery__card__info">
+              <p>{{ item.title }}</p>
+              <p>{{ item.description }}</p>
+            </div>
+            <div class="home-container__gallery__button-wraper">
+              <button class="home-container__gallery__button-wraper__button">
+                Ver en Maps
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!--
+  <div class="home-container__information">
+    <h1 class="home-container__information__title">
+      Hey! Welcome to churrasco travel
+    </h1>
+    <h5 class="home-container__information__subtitle">
+      These are some of the destinations we can offer FOR FREE!
+    </h5>
+    <p class="home-container__information__description">
+      DISCLAIMER: We only offer Google Maps base travels<br />
+      If you have any issues while traveling.. it's Googles fault
+    </p>
+  </div>
+
+  <div class="home-container__gallery container">
+    <div class="row">
+      <div
+        class="home-container__gallery__card col-lg-4"
+        *ngFor="let item of items"
+      >
+        <img
+          class="home-container__gallery__card__image"
+          src=""
+          alt=""
+          srcset="{{item.image}}"
+        />
+        <div class="home-container__gallery__card__info">
+          <p>{{ item.title }}</p>
+          <p>{{ item.description }}</p>
+        </div>
+        <div class="home-container__gallery__button-wraper">
+          <button class="container__gallery__button-wraper__button">
+            Ver en Maps
+          </button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- </div> -->
 </div>
